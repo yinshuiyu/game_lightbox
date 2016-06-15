@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>游戏</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content=""> 
+    <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/common.css" media="all">
+
+	<!-- <script type="application/javascript" src="./js/zepto.js"></script> -->
+	<script src="./js/lity/vendor/zepto.js"></script>
+    <script src="./js/lity/dist/lity.js"></script>
+</head>
+
+<body>
+<div class="success_wrap">
+	<h1 class="success_title">
+		支付成功！<br />
+		立即绑定马上<strong>送5元红包</strong>！
+	</h1><!-- /.success_title -->
+
+	<form action="" class="lity_form success_lity_form">
+		<input type="text" name="phone" id="phone" placeholder="请输入手机号" class="lity_text_error">
+		<input type="text" name="phone" id="phone" placeholder="请输入验证码" class="lity_text_code">
+		<a href="#" class="lity_btn lity_btn_code">获取验证码</a>
+		<div class="lity_error"><span>手机号输入有误，请重新输入</span></div>
+		<a href="success.html" class="lity_btn">登录</a>
+	</form>
+
+	<h2 class="sns_title"><span>第三方登录</span></h2>
+	<div class="sns_wrap">
+		<a class="sns_qq" href="#">QQ登录</a>
+		<a class="sns_wb" href="#">微博登录</a>
+	</div><!-- /.sns_wrap -->
+
+	<a href="#" class="wont_bind">我有钱我任性我不绑定</a>
+</div><!-- /.success_wrap -->
+
+<div class="lity lity-opened lity-inline">
+	<div class="share_top_right"></div>
+	<div class="share_bottom_center"></div>
+	<div class="share_bottom_right"></div>
+</div><!-- /.lity.lity-opened.lity-inline -->
+
+<script type="application/javascript" src="./js/fastclick.js"></script>
+</body>
+</html>
