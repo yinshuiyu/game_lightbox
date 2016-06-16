@@ -245,29 +245,68 @@ body{
 .share_top_right{
   width: 304px;
   height: 112px;
+  line-height: 20px;
+  padding: 53px 45px 0 66px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #454545;
+  font-weight: bold;
   position: absolute;
   top: 8px;
   right: 8px;
   background: url(../img/share_top_right.png) no-repeat 0 0;
   background-size: 304px 112px;}
+  .share_top_right strong{color: #ef0202;}
 .share_bottom_center{
   width: 284px;
   height: 121px;
+  line-height: 20px;
+  padding: 18px 17px 0 58px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #454545;
+  font-weight: bold;
   position: absolute;
   bottom: 8px;
   left: 50%;
   margin: 0 0 0 -142px;
   background: url(../img/share_bottom_center.png) no-repeat center bottom;
   background-size: 284px 121px;}
-.share_bottom_right{
+  .share_bottom_center strong{color: #ef0202;}
+.share_bottom_right_1{
   width: 284px;
   height: 121px;
+  height: 121px;
+  line-height: 20px;
+  padding: 18px 17px 0 56px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #454545;
+  font-weight: bold;
   position: absolute;
   bottom: 8px;
   right: 30%;
   margin: 0 -60px 0 0;
+  background: url(../img/share_bottom_right_1.png) no-repeat center bottom;
+  background-size: 284px 121px;}
+  .share_bottom_right_1 strong{color: #ef0202;}
+.share_bottom_right{
+  width: 284px;
+  height: 121px;
+  height: 121px;
+  line-height: 20px;
+  padding: 18px 17px 0 56px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #454545;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  right: 5%;
+  margin: 0 0 0 0;
   background: url(../img/share_bottom_right.png) no-repeat center bottom;
   background-size: 284px 121px;}
+  .share_bottom_right strong{color: #ef0202;}
 .test_bar{
   width: 100%;
   display: block;
@@ -277,7 +316,7 @@ body{
 
 /*iPhone 6*/
 @media screen and (min-width: 375px) {
-  .share_bottom_right{margin-right: -55px;}
+  .share_bottom_right_1{margin-right: -55px;}
 }
 /*iPhone 6 Plus*/
 @media screen and (min-width: 414px) {
