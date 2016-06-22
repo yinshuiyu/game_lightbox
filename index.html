@@ -17,53 +17,70 @@
 </head>
 
 <body>
-<iframe class="game_iframe" src="http://m.amap.com" frameborder="0"></iframe>
+<div class="wrapper banner_top banner_bottom">
+	<div id="banner_top" class="red_banner"><a href="javascript:lightbox('#lity_1')">即刻绑定手机领取<strong>VIP</strong>大礼包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
 
-<div id="lity_0" class="lity_wrap lity-hide">
-	<h1 class="lity_title">
-		选择登录方式
-	</h1><!-- /.lity_title -->
+	<iframe class="game_iframe" src="http://m.amap.com" frameborder="0"></iframe>
 
-	<a href="#" class="lity_link">游客身份登陆</a>
-	<a id="lity_link_phone" href="javascript:lightbox('#lity_1')" class="lity_link lity_link_phone">手机一键登录</a>
+	<div id="lity_0" class="lity_wrap lity-hide">
+		<h1 class="lity_title">
+			选择登录方式
+		</h1><!-- /.lity_title -->
 
-	<h2 class="sns_title"><span>第三方登录</span></h2>
-	<div class="sns_wrap">
-		<a class="sns_qq" href="#">QQ登录</a>
-		<a class="sns_wb" href="#">微博登录</a>
-	</div><!-- /.sns_wrap -->
-</div><!-- /.lity_wrap -->
+		<a href="#" class="lity_link">游客身份登陆</a>
+		<a id="lity_link_phone" href="javascript:lightbox('#lity_1')" class="lity_link lity_link_phone">手机一键登录</a>
 
-<div id="lity_1" class="lity_wrap lity-hide">
-	<h1 class="lity_title">
-		<a class="lity_close" href="javascript:lightbox.close()">关闭</a>
-		<a class="go_back" href="javascript:lightbox('#lity_0')">返回</a>
-	</h1><!-- /.lity_title -->
+		<h2 class="sns_title"><span>第三方登录</span></h2>
+		<div class="sns_wrap">
+			<a class="sns_qq" href="#">QQ登录</a>
+			<a class="sns_wb" href="#">微博登录</a>
+		</div><!-- /.sns_wrap -->
+	</div><!-- /.lity_wrap -->
 
-	<form action="" class="lity_form">
-		<input type="text" name="phone" id="phone" placeholder="请输入手机号" class="lity_text_error">
-		<input type="text" name="phone" id="phone" placeholder="请输入验证码" class="lity_text_code">
-		<a href="#" class="lity_btn lity_btn_code">获取验证码</a>
-		<div class="lity_error"><span>手机号输入有误，请重新输入</span></div>
-		<a href="success.html" class="lity_btn">登录</a>
-	</form>
-</div><!-- /.lity_wrap -->
+	<div id="lity_1" class="lity_wrap lity-hide">
+		<h1 class="lity_title">
+			<a class="lity_close" href="javascript:lightbox.close()">关闭</a>
+			<a class="go_back" href="javascript:lightbox('#lity_0')">返回</a>
+		</h1><!-- /.lity_title -->
 
-<div id="lity_2" class="lity_wrap lity_wrap_2 lity-hide">
-	该手机号已绑定其他角色,继续登录将覆盖当前游客身份,是否要继续？
+		<form action="" class="lity_form">
+			<input type="text" name="phone" id="phone" placeholder="请输入手机号" class="lity_text_error">
+			<input type="text" name="phone" id="phone" placeholder="请输入验证码" class="lity_text_code">
+			<a href="#" class="lity_btn lity_btn_code">获取验证码</a>
+			<div class="lity_error"><span>手机号输入有误，请重新输入</span></div>
+			<a href="success.html" class="lity_btn">登录</a>
+		</form>
+	</div><!-- /.lity_wrap -->
 
-	<div class="lity_btn_wrap">
-		<a href="#">继续登录</a>
-		<a class="lity_btn_cancel" href="javascript:lightbox.close()">取消</a>
-	</div><!-- /.lity_btn_wrap -->
-</div><!-- /.lity_wrap -->
+	<div id="lity_2" class="lity_wrap lity_wrap_2 lity-hide">
+		该手机号已绑定其他角色,继续登录将覆盖当前游客身份,是否要继续？
 
-<a class="red_banner" href="javascript:lightbox('#lity_1')"><span>即刻绑定手机领取<strong>VIP</strong>大礼包</span></a><!-- /.red_banner -->
+		<div class="lity_btn_wrap">
+			<a href="#">继续登录</a>
+			<a class="lity_btn_cancel" href="javascript:lightbox.close()">取消</a>
+		</div><!-- /.lity_btn_wrap -->
+	</div><!-- /.lity_wrap -->
+
+	<div id="banner_bottom" class="red_banner red_banner_bottom"><a href="javascript:lightbox('#lity_1')">保存到桌面 首次登陆送红包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
+</div><!-- /.wrapper -->
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
 <script type="text/javascript">
+	function banner_close(target){
+		var wrapper = $('.wrapper'),
+			zTarget = $(target).parent(),
+			sId = zTarget.attr('id'),
+			zIframe = $('iframe'),
+			zIframeSrc = zIframe.attr('src')
+
+		wrapper.removeClass(sId)
+		zTarget.remove()
+
+		// zIframe.attr('src', zIframeSrc)
+	}
+
 	var lightbox = lity();
-	lightbox('#lity_0');
+	// lightbox('#lity_0');
 	// lightbox('#lity_1');
 	// lightbox('#lity_2');
 </script>
