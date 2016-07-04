@@ -115,14 +115,26 @@
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
 <script type="text/javascript">
+function banner_close(target){
+	var wrapper = $('.wrapper'),
+		zTarget = $(target).parent(),
+		sId = zTarget.attr('id'),
+		zIframe = $('iframe'),
+		zIframeSrc = zIframe.attr('src')
 
-	var lightbox = lity();
-	// lightbox('#lity_0');
-	// lightbox('#lity_1');
-	// lightbox('#lity_2');
-	// lightbox('#lity_3');
-	// lightbox('#lity_4');
-	lightbox('#lity_5');
+	wrapper.removeClass(sId)
+	zTarget.remove()
+
+	// zIframe.attr('src', zIframeSrc)
+}
+
+var lightbox = lity();
+// lightbox('#lity_0');
+// lightbox('#lity_1');
+// lightbox('#lity_2');
+// lightbox('#lity_3');
+// lightbox('#lity_4');
+lightbox('#lity_5');
 </script>
 </body>
 </html>
