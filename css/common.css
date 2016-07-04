@@ -108,6 +108,12 @@ body{
       background-size: 57px 30px;
       border-color: #ec9307;
       text-indent: -40px;}
+    .lity_link.lity_link_yellow{
+      background: #ffb33c;
+      background-size: 57px 30px;
+      border-color: #ec9307;
+      text-indent: 3px;
+      font-size: 12px;}
     .lity_link::before{
       content: '';
       width: 48px;
@@ -121,6 +127,17 @@ body{
       .lity_link.lity_link_phone::before{
         background-color: #ec9307;
         background-position: center -45px;}
+      .lity_link.lity_link_yellow::before{
+        background: #ec9307 url(../img/lity_link_gold.png) no-repeat center center;
+        background-size: 25px 21px;}
+      .lity_link.lity_link_time::before{
+        background: #0b8dd0 url(../img/lity_link_time.png) no-repeat center center;
+        background-size: 21px 25px;}
+    .lity_link_line{
+      width: 100%;
+      height: 1px;
+      margin-top: 10px;
+      background: #dbdbdb;}
   .sns_title{
     height: 6px;
     line-height: 12px;
@@ -346,6 +363,34 @@ body{
   position: absolute;
   bottom: 0;
   z-index: 9999;}
+
+.palyed_mins{
+  color: #666666;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 20px 0 20px 60px; 
+  background: url(../img/skeleton_gold.png) no-repeat 0 center;
+  background-size: 50px 42px;
+  border-bottom: 1px solid #dbdbdb;}
+  .palyed_mins.palyed_mins_5{
+    padding-left: 100px;
+    background-position: 25px center;}
+.lity_radius_btn_wrap{
+  text-align: center;
+  padding: 20px 0 5px;}
+  .lity_radius_btn_wrap a{
+    width: 83px;
+    font-size: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    line-height: 25px;
+    display: inline-block;
+    color: #fff;
+    background: #17a2ea;
+    text-align: center;
+    margin: 0 10px;
+    border: 1px solid #e1e1e1;}
+    .lity_radius_btn_wrap a.lity_btn_cancel{background: #f3606f;}
 
 /*iPhone 6*/
 @media screen and (min-width: 375px) {

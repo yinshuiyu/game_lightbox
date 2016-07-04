@@ -57,3 +57,19 @@ var load = {
 	}
 }
 load.init()
+
+function banner_close(target){
+	var wrapper = $('.wrapper'),
+		zTarget = $(target).parent(),
+		sId = zTarget.attr('id'),
+		zIframe = $('iframe'),
+		zIframeSrc = zIframe.attr('src')
+
+	wrapper.removeClass(sId)
+	zTarget.remove()
+
+	// zIframe.attr('src', zIframeSrc)
+}
+
+var lightbox = lity();
+// lightbox('#lity_3');

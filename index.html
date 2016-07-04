@@ -61,28 +61,68 @@
 		</div><!-- /.lity_btn_wrap -->
 	</div><!-- /.lity_wrap -->
 
+	<div id="lity_3" class="lity_wrap lity-hide">
+		<h1 class="lity_title">
+		    欢迎光临
+		</h1><!-- /.lity_title -->
+
+		<p class="palyed_mins">
+		    游玩2分钟，<br />
+			送见面礼500积分（￥5元）
+		</p><!-- /.palyed_mins -->
+
+		<div class="lity_radius_btn_wrap">
+			<a href="#">提现</a>
+			<a class="lity_btn_cancel" href="javascript:lightbox.close()">继续游玩</a>
+		</div><!-- /.lity_btn_wrap -->
+	</div><!-- /.lity_wrap -->
+
+	<div id="lity_4" class="lity_wrap lity-hide">
+		<h1 class="lity_title">
+		    欢迎光临
+		</h1><!-- /.lity_title -->
+
+		<p class="palyed_mins palyed_mins_5">
+		    游玩5分钟，<br />
+			VIP礼包等你拿，<br />
+			500积分（￥5元）
+		</p><!-- /.palyed_mins -->
+
+		<div class="lity_radius_btn_wrap">
+			<a href="#">提现</a>
+			<a class="lity_btn_cancel" href="javascript:lightbox.close()">继续游玩</a>
+		</div><!-- /.lity_btn_wrap -->
+	</div><!-- /.lity_wrap -->
+
+	<div id="lity_5" class="lity_wrap lity-hide">
+		<h1 class="lity_title">
+		    欢迎光临
+		</h1><!-- /.lity_title -->
+
+		<a href="#" class="lity_link lity_link_time">您的在线时间：5分钟</a>
+		<a href="#" class="lity_link lity_link_yellow">帐户余额：100积分（￥10元）</a>
+
+		<div class="lity_link_line"></div>
+
+		<div class="lity_radius_btn_wrap">
+			<a href="#">提现</a>
+			<a class="lity_btn_cancel" href="javascript:lightbox.close()">继续游玩</a>
+		</div><!-- /.lity_btn_wrap -->
+	</div><!-- /.lity_wrap -->
+
 	<div id="banner_bottom" class="red_banner red_banner_bottom"><a href="javascript:lightbox('#lity_1')">保存到桌面 首次登陆送红包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
 </div><!-- /.wrapper -->
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
 <script type="text/javascript">
-	function banner_close(target){
-		var wrapper = $('.wrapper'),
-			zTarget = $(target).parent(),
-			sId = zTarget.attr('id'),
-			zIframe = $('iframe'),
-			zIframeSrc = zIframe.attr('src')
-
-		wrapper.removeClass(sId)
-		zTarget.remove()
-
-		// zIframe.attr('src', zIframeSrc)
-	}
 
 	var lightbox = lity();
 	// lightbox('#lity_0');
 	// lightbox('#lity_1');
 	// lightbox('#lity_2');
+	// lightbox('#lity_3');
+	// lightbox('#lity_4');
+	lightbox('#lity_5');
 </script>
 </body>
 </html>
