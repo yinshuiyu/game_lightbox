@@ -126,6 +126,7 @@ body{padding-bottom: 0.98rem;}
 .footer_bar{
   width: 100%;
   position: fixed;
+  z-index: 3;
   bottom: 0;
   background: #fff;}
   .footer_bar a{
@@ -138,10 +139,13 @@ body{padding-bottom: 0.98rem;}
     position: relative;
     border-top: 1px solid #d0d0d0;
     background: url(../img/footer_bar_icon_1.png) no-repeat center 0.17rem;
-    background-size: 0.35rem 0.35rem;}
-    .footer_bar a.footer_bar_0{background-image: url(../img/footer_bar_icon_0.png);background-size: 0.59rem 0.28rem;}
-    .footer_bar a.footer_bar_0.current{background-color: #259ffd;color: #fff;}
-    .footer_bar a.footer_bar_2{background-image: url(../img/footer_bar_icon_2.png);background-size: 0.37rem 0.37rem;}
+    background-size: 0.35rem 1.35rem;}
+    .footer_bar a.current{background-color: #259ffd;color: #fff;}
+    .footer_bar a.footer_bar_0{background-image: url(../img/footer_bar_icon_0.png);background-size: 0.59rem 1.28rem;background-position: center 0.22rem;}
+    .footer_bar a.footer_bar_0.current{background-position: center -0.78rem;}
+    .footer_bar a.footer_bar_1.current{background-position: center -0.83rem;}
+    .footer_bar a.footer_bar_2{background-image: url(../img/footer_bar_icon_2.png);background-size: 0.37rem 1.37rem;}
+    .footer_bar a.footer_bar_2.current{background-position: center -0.80rem;}
     .footer_bar a::before{
       content: '';
       width: 1px;
@@ -230,7 +234,8 @@ nav{
       width: 0.86rem;
       height: 0.86rem;
       float: left;
-      display: block;}
+      display: block;
+      border-radius: 0.10rem;}
     .game_list li strong{
       color: #000000;
       display: block;
@@ -281,6 +286,76 @@ nav{
       color: #259ffd;
       border: 1px solid #e1e1e1;
       border-radius: 0.235rem;}
+.box{
+  padding: 0 0.25rem;
+  border-bottom: 0.07rem solid #e7e7e7;}
+.home_title{
+  line-height: 0.53rem;
+  font-size: 0.24rem;
+  font-weight: bold;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0 0 0 0.50rem;
+  background: url(../img/home_icon.png) no-repeat 0 8px;
+  background-size: 0.43rem 2.25rem;}
+  .home_title.home_title_hot{background-position: 0 -1.83rem;}
+  .more{
+    float: right;
+    color: #259ffd;
+    padding: 0 0.10rem 0 0;
+    font-weight: normal;
+    font-size: 0.20rem;
+    position: relative;}
+    .more small{
+      top: 0;
+      margin: -0.05rem 0 0;
+      position: absolute;
+      display: inline-block;}
+.games_played_wrap{
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding: 0.25rem 0.25rem 0.25rem 0;
+  margin: 0 -0.25rem 0 0;}
+  .games_played_wrap a{
+    display: inline-block;}
+  .games_played_wrap img{
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 0.10rem;}
+.hot_games{
+  width: 100%;
+  font-size: 0.18rem;
+  color: #a1a1a1;}
+  .hot_games td{
+    padding: 0.20rem 0.10rem;
+    border: 1px solid #d9d9d9;}
+    .hot_games td.td_top{border-top: none;}
+    .hot_games td.td_left{border-left: none;}
+    .hot_games td.td_right{border-right: none;}
+    .hot_games td.td_bottom{border-bottom: none;}
+    .hot_games td a{color: #a1a1a1;}
+    .hot_games img{
+      float: left;
+      width: 0.86rem;
+      height: 0.86rem;
+      border-radius: 0.10rem;}
+    .hot_games strong,
+    .hot_games p{
+      width: 1.60rem;
+      margin-left: 1.00rem;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;}
+    .hot_games strong{
+      line-height: 0.40rem;
+      font-size: 0.26rem;
+      color: #383838;
+      margin-bottom: 0.10rem;}
+.home_title_small{
+  font-size: 0.24rem;
+  color: #000;
+  padding: 10px 0.26rem 0;
+  font-weight: bold;}
 
 
 
