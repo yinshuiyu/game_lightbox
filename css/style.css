@@ -466,6 +466,154 @@ nav{
         color: #fff;}
       .integral_info li.integral_info_1{background-position: 0 -1.03rem;}
       .integral_info li.integral_info_2{background-position: 0 bottom;}
+.faq_list{
+  line-height: 0.32rem;
+  font-size: 0.22rem;
+  color: #777777;
+  padding: 0.10rem 0.40rem 0.40rem;}
+  .faq_list li{
+    padding: 0.30rem 0 0.20rem 0.50rem;
+    border-bottom: 1px solid #e7e7e7;}
+    .faq_list li strong{
+      display: block;
+      font-size: 0.24rem;
+      padding: 0 0 0.22rem;
+      position: relative;}
+      .faq_list li strong::before{
+        content: 'Q';
+        width: 0.40rem;
+        height: 0.40rem;
+        color: #fff;
+        font-size: 0.22rem;
+        line-height: 0.40rem;
+        text-align: center;
+        display: block;
+        font-weight: normal;
+        border-radius: 50%;
+        background: #259ffd;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: -0.06rem 0 0 -0.50rem;}
+    .faq_list li span{
+      display: block;
+      position: relative;}
+      .faq_list li span::before{
+        content: 'A';
+        width: 0.40rem;
+        height: 0.40rem;
+        color: #fff;
+        font-size: 0.22rem;
+        line-height: 0.40rem;
+        text-align: center;
+        display: block;
+        font-weight: normal;
+        border-radius: 50%;
+        background: #f3606f;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: -0.06rem 0 0 -0.50rem;}
+.recharge{
+  line-height: 0.28rem;
+  font-size: 0.20rem;
+  color: #777777;
+  padding: 0 0.40rem;}
+  .recharge li{
+    padding: 0.40rem 0 0.40rem 1.00rem;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;}
+    .recharge li::before{
+      content: '';
+      width: 0.65rem;
+      height: 0.65rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0.20rem 0 0 0.20rem;
+      background: url(../img/recharge_icons.png) no-repeat 0 0;
+      background-size: 0.65rem 4.18rem;}
+    .recharge li.recharge_1::before{background-position: 0 -1.70rem;}
+    .recharge li.recharge_2::before{background-position: 0 bottom;}
+    .recharge li strong{
+      color: #259ffd;
+      font-size: 0.22rem;
+      margin: 0 1.80rem 0 0;}
+    .recharge li p{
+      margin: 0 1.80rem 0 0;}
+    .recharge li a{
+      width: 1.37rem;
+      line-height: 0.35rem;
+      border-radius: 0.175rem;
+      float: right;
+      text-align: center;
+      color: #fff;
+      font-size: 0.20rem;
+      float: right;
+      display: inline-block;
+      background: #259ffd;}
+
+
+.lity_wrap{
+  width: 270px;
+  background: #ffffff;
+  padding: 0 20px 15px;
+  overflow: hidden;
+  border-radius: 5px;
+  font-size: 17px;
+  border: 1px solid #e9e9e9;}
+  .lity_title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+    color: #505050;
+    margin: 0 -20px;
+    text-align: center;
+    font-weight: bold;
+    background: #e9e9e9;}
+.lity_radius_btn_wrap{
+  text-align: center;
+  padding: 20px 0 5px;}
+  .lity_radius_btn_wrap a{
+    width: 83px;
+    font-size: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    line-height: 25px;
+    display: inline-block;
+    color: #fff;
+    background: #17a2ea;
+    text-align: center;
+    margin: 0 10px;}
+    .lity_radius_btn_wrap a.lity_btn_cancel{background: #f3606f;}
+  .lity_form_wrap{
+    font-size: 0.22rem;
+    padding: 20px 0;
+    border-bottom: 1px solid #dbdbdb;}
+    .lity_form_wrap input[type="text"]{
+      line-height: 0.46rem;
+      border-radius: 0.23rem;
+      margin: 0.12rem 0;
+      border: 1px solid #259ffd;}
+    .phone_input{
+      width: 100%;
+      text-indent: 0.66rem;
+      background: url(../img/phone_left.png) no-repeat 0 center;
+      background-size: 0.56rem 0.50rem;}
+    .code_input{
+      width: 45%;
+      text-align: center;}
+    .got_code{
+      width: 45%;
+      line-height: 0.46rem;
+      border-radius: 0.23rem;
+      display: inline-block;
+      border: 1px solid #259ffd;
+      margin: 0.12rem 0 0 8%;
+      color: #fff;
+      text-align: center;
+      background: #259ffd;}
 
 
 

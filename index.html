@@ -20,6 +20,13 @@
 <div class="wrapper banner_top banner_bottom">
 	<div id="banner_top" class="red_banner"><a href="javascript:lightbox('#lity_1')">即刻绑定手机领取<strong>VIP</strong>大礼包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
 
+	<div class="left_item">
+		余额:100积分<br />（￥1元）
+	</div><!-- /.left_item -->
+	<div class="left_item">
+		在线倒计时<br /><span id="countdown"></span>
+	</div><!-- /.left_item -->
+
 	<iframe class="game_iframe" src="http://m.amap.com" frameborder="0"></iframe>
 
 	<div id="lity_0" class="lity_wrap lity-hide">
@@ -99,8 +106,8 @@
 		    欢迎光临
 		</h1><!-- /.lity_title -->
 
-		<a href="#" class="lity_link lity_link_time">您的在线时间：5分钟</a>
-		<a href="#" class="lity_link lity_link_yellow">帐户余额：100积分（￥10元）</a>
+		<a href="#" class="lity_link lity_link_time">您的在线时间:5分钟</a>
+		<a href="#" class="lity_link lity_link_yellow">帐户余额:100积分(￥2.02元)</a>
 
 		<div class="lity_link_line"></div>
 
@@ -112,7 +119,25 @@
 
 	<div id="banner_bottom" class="red_banner red_banner_bottom"><a href="javascript:lightbox('#lity_1')">保存到桌面 首次登陆送红包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
 </div><!-- /.wrapper -->
-
+<SCRIPT LANGUAGE="JavaScript">   
+<!--   
+var maxtime = 2*60 //分钟*60秒
+function CountDown(){   
+	if(maxtime>=0){   
+		minutes = Math.floor(maxtime/60);   
+		seconds = Math.floor(maxtime%60);   
+		msg = minutes+":"+seconds;
+		document.all["countdown"].innerHTML=msg;   
+		--maxtime;
+	}
+	else{   
+		clearInterval(timer);   
+	}   
+}   
+timer = setInterval("CountDown()",1000);   
+//-->   
+</SCRIPT>   
+<div id="timer" style="color:red"></div>
 <script type="application/javascript" src="./js/fastclick.js"></script>
 <script type="text/javascript">
 function banner_close(target){
@@ -132,9 +157,10 @@ var lightbox = lity();
 // lightbox('#lity_0');
 // lightbox('#lity_1');
 // lightbox('#lity_2');
-// lightbox('#lity_3');
+lightbox('#lity_3');
 // lightbox('#lity_4');
-lightbox('#lity_5');
+// lightbox('#lity_5');
+
 </script>
 </body>
 </html>

@@ -98,6 +98,7 @@ body{
     color: #fff;
     font-size: 15px;
     font-weight: bold;
+    white-space: nowrap;
     text-decoration: none;
     margin: 16px auto;
     text-indent: -20px;
@@ -112,7 +113,7 @@ body{
       background: #ffb33c;
       background-size: 57px 30px;
       border-color: #ec9307;
-      text-indent: 3px;
+      text-indent: -3px;
       font-size: 12px;}
     .lity_link::before{
       content: '';
@@ -391,6 +392,27 @@ body{
     margin: 0 10px;
     border: 1px solid #e1e1e1;}
     .lity_radius_btn_wrap a.lity_btn_cancel{background: #f3606f;}
+.left_item{
+  width: 90px;
+  height: 35px;
+  line-height: 16px;
+  color: #fff;
+  font-size: 9px;
+  padding: 2px 0 0 30px;
+  white-space: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 200px 0 0;
+  background: url(../img/left_item.png) no-repeat right 0;
+  background-size: 90px 82px;
+}
+.left_item + .left_item{
+  margin: 250px 0 0;
+  background-position: 0 bottom;
+}
 
 /*iPhone 6*/
 @media screen and (min-width: 375px) {

@@ -72,4 +72,4 @@ function banner_close(target){
 }
 
 var lightbox = lity();
-// lightbox('#lity_3');
+lightbox('#lity_3');
