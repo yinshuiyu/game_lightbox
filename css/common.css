@@ -411,8 +411,44 @@ body{
 }
 .left_item + .left_item{
   margin: 250px 0 0;
-  background-position: 0 bottom;
-}
+  background-position: 0 bottom;}
+
+.left_orange{
+  min-width: 35px;
+  min-height: 17px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin: 80px 0 0 17px;
+  position: absolute;
+  background: #f1641b;
+  box-shadow: 0 0 3px #a29c9f;
+  background: linear-gradient(180deg, #ee740f, #f5512b);}
+.left_orange.left_orange_time{
+  color: #ffff00;}
+  .left_orange_time{float: left;}
+  .left_orange_money{
+    float: right;
+    color: #ffff00;}
+.left_orange p{
+  margin: 20px 0 0;
+  line-height: 14px;
+  font-size: 9px;
+  text-align: left;}
+.check_balance{
+  line-height: 18px;
+  color: #000;
+  font-size: 10px;
+  display: inline-block;
+  text-decoration: none;
+  background: #ffd200;
+  border-radius: 5px;
+  padding: 0 9px;
+  margin: 3px 0;
+  box-shadow: 0 0 3px #f45826 inset;}
 
 /*iPhone 6*/
 @media screen and (min-width: 375px) {

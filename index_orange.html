@@ -20,12 +20,28 @@
 <div class="wrapper banner_top banner_bottom">
 	<div id="banner_top" class="red_banner"><a href="javascript:lightbox('#lity_1')">即刻绑定手机领取<strong>VIP</strong>大礼包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
 
-	<div class="left_item">
-		余额:100积分<br />（￥1元）
-	</div><!-- /.left_item -->
-	<div class="left_item">
-		在线倒计时<br /><span id="countdown"></span>
-	</div><!-- /.left_item -->
+	<div id="orange_time" class="left_orange none">
+		[<span class="countdown"></span>]
+	</div><!-- /.left_orange -->
+
+	<div id="orange_money" class="left_orange left_orange_time none">
+		+￥0.15
+	</div><!-- /.left_orange -->
+
+	<div id="orange_middle" class="left_orange">
+		挂机收益 ￥116.52<br />
+		<span class="left_orange_time">[<span class="countdown"></span>]</span>
+		<span class="left_orange_money">+￥0.15</span>
+	</div><!-- /.left_orange -->
+
+	<div id="orange_big" class="left_orange none">
+		挂机收益 ￥116.52<br />
+		<span class="left_orange_time">[<span class="countdown"></span>]</span>
+		<span class="left_orange_money">+￥0.15</span>
+
+		<p>说明：只要保持在线，<br />每分钟都可获得一定金<br />额，可用于游戏消费哦。</p>
+		<a href="#" class="check_balance">查看我的帐户余额</a>
+	</div><!-- /.left_orange -->
 
 	<iframe class="game_iframe" src="http://m.amap.com" frameborder="0"></iframe>
 
@@ -119,23 +135,65 @@
 
 	<div id="banner_bottom" class="red_banner red_banner_bottom"><a href="javascript:lightbox('#lity_1')">保存到桌面 首次登陆送红包</a><div class="banner_close" onclick="banner_close(this)">关闭</div></div><!-- /.red_banner -->
 </div><!-- /.wrapper -->
-<SCRIPT LANGUAGE="JavaScript">   
-<!--   
-var maxtime = 2*60 //分钟*60秒
+<SCRIPT LANGUAGE="JavaScript">     
+var iStatus = 0,
+	done = false,
+	oTime   = $('#orange_time'),
+	oMoney  = $('#orange_money'),
+	oMiddle = $('#orange_middle'),
+	oBig    = $('#orange_big')
+
+oTime.click(function(event) {
+	var oThis = $(this)
+
+	iStatus = 0
+	oThis.addClass('none')
+	oMiddle.removeClass('none')
+});
+oMiddle.click(function(event) {
+	var oThis = $(this)
+
+	if(done){
+		return true
+	}
+	
+	iStatus = 1
+	oThis.addClass('none')
+	oTime.removeClass('none')
+});
+oMoney.click(function(event) {
+	var oThis = $(this)
+
+	oThis.addClass('none')
+	oBig.removeClass('none')
+});
+oBig.click(function(event) {
+	var oThis = $(this)
+
+	oThis.addClass('none')
+	oMoney.removeClass('none')
+});
+
+var maxtime = 10 //分钟*60秒
 function CountDown(){   
 	if(maxtime>=0){   
 		minutes = Math.floor(maxtime/60);   
 		seconds = Math.floor(maxtime%60);   
 		msg = minutes+":"+seconds;
-		document.all["countdown"].innerHTML=msg;   
+		// document.all["countdown"].innerHTML=msg;
+		$('.countdown').html(msg)
 		--maxtime;
 	}
-	else{   
+	else{
+		done = true
+		if(iStatus){
+			oTime.addClass('none')
+			oMoney.removeClass('none')
+		}
 		clearInterval(timer);   
 	}   
 }   
-timer = setInterval("CountDown()",1000);   
-//-->   
+timer = setInterval("CountDown()",1000);
 </SCRIPT>   
 <div id="timer" style="color:red"></div>
 <script type="application/javascript" src="./js/fastclick.js"></script>
