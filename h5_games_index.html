@@ -10,6 +10,7 @@
     <meta name="keywords" content=""> 
 
     <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/swiper.min.css" media="all">
     <link rel="stylesheet" href="./css/style.css" media="all">
 
     <script src="./js/lity/dist/zepto.js"></script>
@@ -27,9 +28,21 @@
     <a class="flexbox-children" href="#">我的</a>
 </nav>
 
-<div class="banner">
-    <a href="javascript:void(0);"><img src="./img/banner.jpg" alt=""></a>
-</div><!-- /.banner -->
+<div id="banner" class="banner swiper-container">
+    <div class="swiper-wrapper">
+        <a href="javascript:void(0);" class="swiper-slide">
+            <img class="index_swipe_img" src="img/banner.jpg"/>
+        </a>
+        <a href="javascript:void(0);" class="swiper-slide">
+            <img class="index_swipe_img" src="img/banner.jpg"/>
+        </a>
+        <a href="javascript:void(0);" class="swiper-slide">
+            <img class="index_swipe_img" src="img/banner.jpg"/>
+        </a>
+    </div>
+    <div class="swiper-button-prev index-prev"></div>
+    <div class="swiper-button-next index-next"></div>
+</div>
 
 <div class="box">
     <h2 class="home_title">
@@ -140,6 +153,7 @@
 </div><!-- /.footer_bar -->
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
 <script type="application/javascript" src="./js/main.js"></script>
 
 </body>

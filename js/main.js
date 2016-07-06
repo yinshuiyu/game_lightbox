@@ -72,4 +72,11 @@ function banner_close(target){
 }
 
 var lightbox = lity();
-lightbox('#lity_3');
+// lightbox('#lity_3');
+
+
+var mySwiper = new Swiper('#banner', {
+    autoplay: 3000,//可选选项，自动滑动
+    prevButton:'.swiper-button-prev',
+    nextButton:'.swiper-button-next',
+})
