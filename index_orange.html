@@ -137,7 +137,6 @@
 </div><!-- /.wrapper -->
 <SCRIPT LANGUAGE="JavaScript">     
 var iStatus = 0,
-	done = false,
 	oTime   = $('#orange_time'),
 	oMoney  = $('#orange_money'),
 	oMiddle = $('#orange_middle'),
@@ -153,10 +152,6 @@ oTime.click(function(event) {
 oMiddle.click(function(event) {
 	var oThis = $(this)
 
-	if(done){
-		return true
-	}
-	
 	iStatus = 1
 	oThis.addClass('none')
 	oTime.removeClass('none')

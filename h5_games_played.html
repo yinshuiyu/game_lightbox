@@ -10,12 +10,19 @@
     <meta name="keywords" content=""> 
     
     <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/swiper.min.css" media="all">
     <link rel="stylesheet" href="./css/style.css" media="all">
 
     <script src="./js/lity/dist/zepto.js"></script>
     <script src="./js/lity/dist/lity.js"></script>
-    <script>
-    	document.querySelector('html').style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+    <script type="text/javascript">
+        //宽度大于768算作pc端
+        var oHtml = document.querySelector('html')
+        if (oHtml.clientWidth > 768) {
+            oHtml.style.fontSize = '70px';
+        } else {
+            oHtml.style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+        }
     </script>
 
 </head>
@@ -35,7 +42,7 @@
         <a class="list_btn" href="#">进入</a>
         <img src="./img/game_icon.png" alt="">
         <strong>西行者联盟</strong>
-        <p>乾创之《西行者联盟》是一款以中原武侠为背游戏突破传统页游局最大限...</p>
+        <p>乾创之《西行者联盟》是一款以中原</p>
     </li>
     <li>
         <a class="list_btn" href="#">进入</a>
@@ -78,6 +85,7 @@
 </div><!-- /.footer_bar -->
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
+<script type="application/javascript" src="./js/swiper.min.js"></script>
 <script type="application/javascript" src="./js/main.js"></script>
 
 </body>

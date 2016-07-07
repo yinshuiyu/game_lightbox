@@ -15,8 +15,14 @@
 
     <script src="./js/lity/dist/zepto.js"></script>
     <script src="./js/lity/dist/lity.js"></script>
-    <script>
-    	document.querySelector('html').style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+    <script type="text/javascript">
+        //宽度大于768算作pc端
+        var oHtml = document.querySelector('html')
+        if (oHtml.clientWidth > 768) {
+            oHtml.style.fontSize = '70px';
+        } else {
+            oHtml.style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+        }
     </script>
 
 </head>
@@ -153,7 +159,7 @@
 </div><!-- /.footer_bar -->
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
-<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script type="application/javascript" src="./js/swiper.min.js"></script>
 <script type="application/javascript" src="./js/main.js"></script>
 
 </body>

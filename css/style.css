@@ -184,7 +184,7 @@ nav{
       color: #259ffd;
       border-bottom: 2px solid #259ffd;}
 .banner{}
-  .banner img{max-width: 100%;}
+  .banner img{width: 100%;}
 .game_list{padding: 0 0.26rem;}
   .game_list li{
     display: block;
@@ -243,6 +243,7 @@ nav{
       padding: 0.02rem 0 0.16rem;
       margin: 0 1.20rem 0 1.10rem;}
     .game_list li p{
+      height: 0.50rem;
       line-height: 0.27rem;
       color: #999999;
       display: block;

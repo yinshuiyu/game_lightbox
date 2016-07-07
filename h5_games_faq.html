@@ -8,16 +8,22 @@
 
     <meta name="description" content="">
     <meta name="keywords" content=""> 
-
+    
     <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/swiper.min.css" media="all">
     <link rel="stylesheet" href="./css/style.css" media="all">
 
     <script src="./js/lity/dist/zepto.js"></script>
     <script src="./js/lity/dist/lity.js"></script>
-    <script>
-    	document.querySelector('html').style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+    <script type="text/javascript">
+        //宽度大于768算作pc端
+        var oHtml = document.querySelector('html')
+        if (oHtml.clientWidth > 768) {
+            oHtml.style.fontSize = '70px';
+        } else {
+            oHtml.style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+        }
     </script>
-
 </head>
 
 <body>
@@ -72,6 +78,7 @@
 </div><!-- /.footer_bar -->
 
 <script type="application/javascript" src="./js/fastclick.js"></script>
+<script type="application/javascript" src="./js/swiper.min.js"></script>
 <script type="application/javascript" src="./js/main.js"></script>
 
 </body>
