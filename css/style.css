@@ -774,6 +774,36 @@ nav{
     .game_list li.exchange a.list_btn{
       background: #259ffd;
       color: #fff;}
+  .user_time{
+    line-height: 0.91rem;
+    display: inline-block;
+    float: right;
+    color: #999999;
+    font-size: 0.18rem;}
+  .dynamic_bottom{
+    color: #999999;
+    font-size: 0.18rem;
+    padding: 1.50rem 0 0.50rem;
+    margin: 0 0.40rem;
+    text-align: center;
+    position: relative;
+    background: url(../img/eye.png) no-repeat center 23px;
+    background-size: 0.86rem;
+    border-bottom: 1px solid #17a2ea;}
+    .like{
+      width: 0.52rem;
+      height: 0.50rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      color: #17a2ea;
+      font-size: 0.24rem;
+      text-align: right;
+      padding: 0.32rem 0 0;
+      margin: 0 0 0.10rem;
+      box-sizing: border-box;
+      background: url(../img/like.png) no-repeat 0 0;
+      background-size: 0.42rem 0.49rem;}
 
 
 
