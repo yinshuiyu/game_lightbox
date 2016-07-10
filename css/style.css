@@ -691,6 +691,7 @@ nav{
   color: #17a2ea;
   margin: 0.30rem auto 0;}
   .me_tb td{
+    position: relative;
     padding: 0.08rem 0;}
     .me_tb td:first-child{
       padding-right: 0.27rem;
@@ -704,11 +705,20 @@ nav{
       position: absolute;
       right: 0;
       margin: 0 -0.02rem 0 0;}
+    .error_msg{
+      position: absolute;
+      bottom: 0;
+      color: red;
+      font-size: 0.12rem;
+      left: 0;
+      padding-left: 0.16rem;
+      margin: 0 0 -0.06rem;}
     .me_tb input[type="text"]{
       width: 3.30rem;
       height: 0.45rem;
       line-height: 0.45rem;
       padding: 0 0.16rem;
+      font-size: 0.22rem;
       border: 1px solid #dddddd;}
     .me_tb label{
       color: #9a9a9a;
