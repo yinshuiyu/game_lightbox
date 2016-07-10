@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>触控H5</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content=""> 
+    
+    <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/swiper.min.css" media="all">
+    <link rel="stylesheet" href="./css/style.css" media="all">
+
+    <script src="./js/lity/dist/zepto.js"></script>
+    <script src="./js/lity/dist/lity.js"></script>
+    <script type="text/javascript">
+        //宽度大于768算作pc端
+        var oHtml = document.querySelector('html')
+        if (oHtml.clientWidth > 768) {
+            oHtml.style.fontSize = '70px';
+        } else {
+            oHtml.style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+        }
+    </script>
+
+</head>
+
+<body>
+<nav>
+    <a href="#" class="back">< 返回</a>
+    <a href="#" class="nav_center">个人信息</a>
+</nav>
+
+<div class="me">
+    <div class="me_avatar">
+        <!-- 头像 -->
+        <img src="./img/avatar.png" alt="">
+    </div><!-- /.me_avatar -->
+
+    <div class="me_id">ID：11111111111</div>
+</div><!-- /.me -->
+
+<table class="me_tb">
+    <tr>
+        <td>昵称</td>
+        <td>
+            <input type="text" name="" id="" placeholder="昵称长度应该为3-15个字符">
+        </td>
+    </tr>
+    <tr>
+        <td>个人签名</td>
+        <td>
+            <input type="text" name="" id="" placeholder="个性签名长度不能超过25个字符">
+        </td>
+    </tr>
+    <tr>
+        <td>性别</td>
+        <td>
+            <label for="sex_male">
+                <input type="radio" name="sex" id="sex_male" value="male">
+                男
+            </label>
+            <label for="sex_female">
+                <input type="radio" name="sex" id="sex_female" value="female">
+                女
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td>联系方式</td>
+        <td>
+            <input type="text" name="" id="" placeholder="邮箱/QQ/手机/微博">
+        </td>
+    </tr>
+    <tr>
+        <td>地址</td>
+        <td>
+            <input type="text" name="" id="" placeholder="">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" class="me_btn" value="保存">
+        </td>
+    </tr>
+</table><!-- /.me_tb -->
+
+<div class="footer_bar display-flexbox">
+    <a class="footer_bar_0 flexbox-children current" href="#">游戏</a>
+    <a class="footer_bar_1 flexbox-children" href="#">礼包</a>
+    <a class="footer_bar_2 flexbox-children" href="#">个人</a>
+</div><!-- /.footer_bar -->
+
+<script type="application/javascript" src="./js/fastclick.js"></script>
+<script type="application/javascript" src="./js/swiper.min.js"></script>
+<script type="application/javascript" src="./js/main.js"></script>
+
+</body>
+</html>
