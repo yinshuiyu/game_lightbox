@@ -31,6 +31,11 @@ input[type="text"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button { -webkit-appearance: none; }
+
 ol,
 ul,
 li {
@@ -692,7 +697,7 @@ nav{
   margin: 0.30rem auto 0;}
   .me_tb td{
     position: relative;
-    padding: 0.08rem 0;}
+    padding: 0.15rem 0;}
     .me_tb td:first-child{
       padding-right: 0.27rem;
       position: relative;
@@ -709,10 +714,10 @@ nav{
       position: absolute;
       bottom: 0;
       color: red;
-      font-size: 0.12rem;
+      font-size: 0.18rem;
       left: 0;
       padding-left: 0.16rem;
-      margin: 0 0 -0.06rem;}
+      margin: 0 0 -0.08rem;}
     .me_tb input[type="text"]{
       width: 3.30rem;
       height: 0.45rem;
@@ -731,7 +736,7 @@ nav{
     padding: 0.30rem 0;
     text-align: center;
     text-align-last: center;}
-    .me_tb td[colspan="2"]::before{display: none;}
+    .me_tb td[colspan="2"]::after{display: none;}
       .me_tb td .me_btn{
         width: 1.70rem;
         height: 0.35rem;
@@ -814,7 +819,63 @@ nav{
       box-sizing: border-box;
       background: url(../img/like.png) no-repeat 0 0;
       background-size: 0.42rem 0.49rem;}
-
+    .sign_right{
+      float: right;
+      font-size: 0.16rem;
+      color: #999999;
+      text-align: center;}
+      .do_sign{
+        width: 1.33rem;
+        height: 0.33rem;
+        line-height: 0.33rem;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #259ffd;
+        border-radius: 0.16rem;
+        color: #259ffd;
+        margin: 0.16rem 0 0.10rem;}
+        .do_sign.already_sign{
+          color: #fff;
+          background: #259ffd;}
+        .game_list_sign li{border: none;}
+          .game_list_sign li::before{display: none;}
+          .game_list_sign li strong{
+            padding-top: 0.10rem;
+            margin-right: 0;}
+          .game_list_sign li p{margin-right: 0;}
+          .game_list_sign li p small{
+            width: 2.00rem;
+            display: inline-block;}
+.sign_info{
+  font-size: 0.18rem;
+  color: #999999;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0.20rem 0;
+  margin: 0 0.40rem;}
+  .sign_info h2{
+    padding-bottom: 0.15rem;
+    color: #000000;
+    font-weight: bold;}
+.turntable_box{
+  position: relative;
+  color: #999999;
+  text-align: center;
+  font-size: 0.18rem;
+  padding: 5.50rem 0 0;}
+  .turntable_box img.turntable{
+    width: 4.40rem;
+    height: 4.40rem;
+    left: 50%;
+    top: 0;
+    margin: 0.45rem 0 0.35rem -2.20rem;
+    position: absolute;}
+  .turntable_box img.turntable_btn{
+    width: 1.29rem;
+    height: 2.26rem;
+    top: 0;
+    left: 50%;
+    margin: 1.05rem 0 0 -0.645rem;
+    position: absolute;}
 
 
 

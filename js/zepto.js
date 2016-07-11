@@ -400,3 +400,21 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
     })
   }
 })(Zepto)
+
+$.fn.queueAnim = function (steps, callback) {
+  var $selector = this;
+
+  function iterator(step) {
+    step.push(iterate);
+    $selector.animate.apply($selector, step); 
+  }
+
+  function iterate() {
+    if (!steps.length) return callback && callback();
+    
+    var step = steps.shift();
+    iterator(step);
+  }
+
+  iterate();
+}

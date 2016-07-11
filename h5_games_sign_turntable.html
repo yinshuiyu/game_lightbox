@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>触控H5</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content=""> 
+    
+    <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/swiper.min.css" media="all">
+    <link rel="stylesheet" href="./css/style.css" media="all">
+
+    <script src="./js/lity/dist/zepto.js"></script>
+    <script src="./js/lity/dist/lity.js"></script>
+    <script src="./js/velocity.min.js"></script>
+    <script type="text/javascript">
+        //宽度大于768算作pc端
+        var oHtml = document.querySelector('html')
+        if (oHtml.clientWidth > 768) {
+            oHtml.style.fontSize = '70px';
+        } else {
+            oHtml.style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+<nav>
+    <a href="#" class="back">< 返回</a>
+    <a class="nav_center" href="#">积分排行榜</a>
+</nav>
+
+<div class="user">
+    <div class="sign_right">
+        <a href="javascript:void(0);" class="do_sign">签到</a><br />
+        <!-- <a href="javascript:void(0);" class="do_sign already_sign">已签到</a><br /> -->
+        已签到1天
+    </div><!-- /.sign_right -->
+
+    <img src="./img/avatar.png" alt="" class="user_avatar">
+    <h1 class="user_name">张三</h1>
+    <div class="user_id">ID：1111111111</div>
+</div><!-- /.user -->
+
+<div class="sign_info">
+    <h2>签到抽奖规则：</h2>
+    点击转盘内的开始，随机产生所获得的积分
+</div><!-- /.sign_info -->
+
+<div class="turntable_box">
+    <img id="rotate" src="./img/turnable.png" alt="" class="turntable">
+    <img id="turntable_btn" src="./img/turntable_btn.png" alt="" class="turntable_btn">
+    剩余转盘次数：<span id="left_times"></span>次
+</div><!-- /.turntable_box -->
+
+<div class="footer_bar display-flexbox">
+    <a class="footer_bar_0 flexbox-children current" href="#">游戏</a>
+    <a class="footer_bar_1 flexbox-children" href="#">礼包</a>
+    <a class="footer_bar_2 flexbox-children" href="#">个人</a>
+</div><!-- /.footer_bar -->
+
+<script type="application/javascript" src="./js/fastclick.js"></script>
+<script type="application/javascript" src="./js/swiper.min.js"></script>
+<script type="application/javascript" src="./js/main.js"></script>
+
+<script type="application/javascript">
+var rotate = {
+    left: 3,
+    able: 1,
+    result: null,
+    deg: 0,
+    gifts: ['0积分', '10积分', '20积分', '40积分', '60积分', '80积分', '100积分', '120积分'],
+    init: function(){
+        $('#left_times').html(this.left)
+        this.bind() 
+    },
+    bind: function(){
+        var self = this
+        $('#turntable_btn').click(function(event) {
+            if(self.left <= 0){
+                alert("您已经没有抽奖机会了")
+                return false
+            }
+
+            if(self.able === 1){
+                // self.core()
+                self.reset()
+                self.ajax()
+            }else if(self.able === 2){
+                return false
+            }
+        });
+
+        $('.M_award_second .btn').on('click', function () {
+            hideDialog();
+        })
+        // $('.btn_share').on('click', function () {
+        //     showDialog_award();
+        // })
+    },
+    reset: function(callback){
+        // $('#rotate').css({rotate: 0})
+        $("#rotate").velocity({ 
+            rotateZ: '0deg'
+        }, 0);
+    },
+    core: function(bool){
+        var self = this,
+            done = false,
+            ran = Math.random()*(35-10)+20,
+            arg = [
+                [ { 'rotate': (1935-self.result.code*45+ran)+'deg' }, 3500, 'ease-out' ]
+            ],
+            done = true
+
+        if(self.result.code >= 0 && self.result.code <= 7){
+            $("#rotate").velocity({ 
+                rotateZ: (1935-self.result.code*45+ran)+'deg'
+            }, {
+                /* Log all the animated divs. */
+                complete: function(elements) { 
+                    var oThis = self.target
+
+                    self.able = 1 //转完，点击alert
+                    self.left -- //转完，点击alert
+                    $('#left_times').html(self.left)
+
+                    // self.reset()
+                }
+            });
+        }else if(self.result.code == 4000){//次数已用完
+            alert('您测抽奖次数已用完')
+        }
+    },
+    ajax: function(){
+        var self = this
+
+        self.able = 2 //正在转，点击无动作
+        /*
+        $.ajax({
+            url: 'http://www.baidu.com',
+            type: 'post',
+            data: {},
+            dataType: 'json',
+            success: function(data){
+                if(data){
+                    self.result = data //data.code是0到7，对应8个奖品；code是4000代表抽奖次数已用完
+                }
+            },
+            error: function(data){
+                alert('网络错误，请稍后重试')
+            }
+        })
+        */
+        setTimeout(function(){
+            self.result = {code: 1}
+            self.core()
+        }, 300)
+    }
+}
+rotate.init()
+</script>
+</body>
+</html>

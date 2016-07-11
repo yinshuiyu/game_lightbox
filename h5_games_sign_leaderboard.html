@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>触控H5</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content=""> 
+    
+    <link href="./js/lity/dist/lity.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/swiper.min.css" media="all">
+    <link rel="stylesheet" href="./css/style.css" media="all">
+
+    <script src="./js/lity/dist/zepto.js"></script>
+    <script src="./js/lity/dist/lity.js"></script>
+    <script type="text/javascript">
+        //宽度大于768算作pc端
+        var oHtml = document.querySelector('html')
+        if (oHtml.clientWidth > 768) {
+            oHtml.style.fontSize = '70px';
+        } else {
+            oHtml.style.fontSize = document.documentElement.clientWidth / 320 * 50 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+<nav>
+    <a href="#" class="back">< 返回</a>
+    <a class="nav_center" href="#">积分排行榜</a>
+</nav>
+
+<div class="user">
+    <div class="sign_right">
+        <a href="javascript:void(0);" class="do_sign">签到</a><br />
+        <!-- <a href="javascript:void(0);" class="do_sign already_sign">已签到</a><br /> -->
+        已签到1天
+    </div><!-- /.sign_right -->
+
+    <img src="./img/avatar.png" alt="" class="user_avatar">
+    <h1 class="user_name">张三</h1>
+    <div class="user_id">ID：1111111111</div>
+</div><!-- /.user -->
+
+<ul class="game_list game_list_recommend game_list_sign">
+    <li>
+        <span class="leaderboard_1">1</span>
+        <img src="./img/game_icon.png" alt="">
+        <strong>李二思</strong>
+        <p>
+            <small>签到天数：144</small>
+            <small>累计积分：270</small>
+        </p>
+    </li>
+    <li>
+        <span class="leaderboard_2">2</span>
+        <img src="./img/game_icon.png" alt="">
+        <strong>李二思</strong>
+        <p>
+            <small>签到天数：144</small>
+            <small>累计积分：270</small>
+        </p>
+    </li>
+    <li>
+        <span class="leaderboard_3">3</span>
+        <img src="./img/game_icon.png" alt="">
+        <strong>李二思</strong>
+        <p>
+            <small>签到天数：144</small>
+            <small>累计积分：270</small>
+        </p>
+    </li>
+    <li>
+        <span>4</span>
+        <img src="./img/game_icon.png" alt="">
+        <strong>李二思</strong>
+        <p>
+            <small>签到天数：144</small>
+            <small>累计积分：270</small>
+        </p>
+    </li>
+    <li>
+        <span>5</span>
+        <img src="./img/game_icon.png" alt="">
+        <strong>李二思</strong>
+        <p>
+            <small>签到天数：144</small>
+            <small>累计积分：270</small>
+        </p>
+    </li>
+    <li>
+        <span>6</span>
+        <img src="./img/game_icon.png" alt="">
+        <strong>李二思</strong>
+        <p>
+            <small>签到天数：144</small>
+            <small>累计积分：270</small>
+        </p>
+    </li>
+</ul><!-- /.game_list -->
+
+<div id="loading" class="loading hidden"><span>加载更多</span></div><!-- /.loading -->
+
+<div class="footer_bar display-flexbox">
+    <a class="footer_bar_0 flexbox-children current" href="#">游戏</a>
+    <a class="footer_bar_1 flexbox-children" href="#">礼包</a>
+    <a class="footer_bar_2 flexbox-children" href="#">个人</a>
+</div><!-- /.footer_bar -->
+
+<script type="application/javascript" src="./js/fastclick.js"></script>
+<script type="application/javascript" src="./js/swiper.min.js"></script>
+<script type="application/javascript" src="./js/main.js"></script>
+
+</body>
+</html>
